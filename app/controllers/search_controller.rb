@@ -4,5 +4,11 @@ class SearchController < ApplicationController
   end
 
   def create
+  	@client = GooglePlaces::Client.new(API_KEY)
+  	puts "PLS"
+  	puts @client.spots(-33.8670522, 151.1957362, :name => 'italian')
+
+
+
   end
 end
