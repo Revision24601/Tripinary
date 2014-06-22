@@ -1,17 +1,32 @@
-
-<form action="/search" id="search_form" class="custom show-search-options form-inline">
-  <div class="input-wrapper">
-    <input type="text" class="location input-large input-contrast" autocomplete="off" id="query" name="query" placeholder="Type your query.">
-    <p id="enter_location_error_message" class="bad" style="display:none;">
-      Please set location
-    </p>
-  </div>
-
-  <button type="submit" class="btn btn-primary btn-large btn-contrast" id="submit_location">
-    Search
-  </button>
-</form>
-
-<p class="emergency_text">
-OUR WEBAPP IS CRASHING AND BURNING PLS HALP.
-</p>
+<div class="container">
+	<h4>Please Enter a City Below:</h4>
+	<div class="row">
+		<div class="col-md-10">
+			<form action="/search" id="search_form" class="custom show-search-options form-inline">
+			  <div class="input-wrapper">
+			    <input type="text" class="location input-large input-contrast" autocomplete="off" id="query" name="query" placeholder="Enter City">
+			  </div>
+			  <label>
+			    	<ul class="categoryList">
+			    		<li>
+							<input type="checkbox"> Museums
+						</li>
+						<li>
+							<input type="checkbox"> Kids
+						</li>
+						<li>
+							<input type="checkbox"> Holy Sites
+						</li>
+						<li>
+							<input type="checkbox"> Historical Landmarks
+						</li>
+					</ul>
+			    </label>
+			  <button type="submit" class="btn btn-primary btn-large btn-contrast" id="submit_location">
+			    Search
+			  </button>
+			</form>
+			<span></span>
+		</div>
+	</div>
+</div>
