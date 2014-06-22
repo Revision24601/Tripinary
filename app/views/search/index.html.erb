@@ -1,6 +1,30 @@
-
-<h1>This is types: <%= @types %></h1> 
-<%= @spots %>
-
+<div class="container">
+	<div class="row place-row">
+		<div class="span4 place-name">
+			<h3>Point of Interest</h3>
+		</div>
+		<div class="span2">
+			<h3>Rating</h3>
+		</div>
+		<div class="span3">
+			<h3>Picutes</h3>
+		</div>
+	</div>
+	<% @spots.zip(@photo_url).each do |spot,photo| %>
+		<div class="row place-row">
+			<div class="span4 place-name">
+				<%= spot.name %>
+			</div>
+			<div class="span2">
+				<%= spot.rating %>
+			</div>
+			<div class="span3">
+				<% if photo != nil %>
+					<%= image_tag(photo, :alt => spot.name, :class => "circular") %>
+				<% end %>
+			</div>
+		</div>
+	<% end %>
+</div>
 
 

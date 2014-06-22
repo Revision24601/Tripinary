@@ -1,3 +1,28 @@
 // Place all the styles related to the Search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.place-name {
+	text-align: left;
+	margin-left: 40px;
+}
+
+.place-row {
+	border-bottom: solid 1px white;
+	margin-left: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.place-row:last-child {
+	border: none;
+}
+
+.circular {
+	width: 230px;
+	height: 230px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background-repeat: no-repeat;
+}

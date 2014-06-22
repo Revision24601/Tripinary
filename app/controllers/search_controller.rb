@@ -8,15 +8,24 @@ class SearchController < ApplicationController
   	@search_query = params[:city]
 
   	puts "PARAMS PLS" 
-  	puts params
-  	@client = GooglePlaces::Client.new("AIzaSyB8JsJYe-lexJph91XALK-XhPxPQZAlk48")
+  	@client = GooglePlaces::Client.new("AIzaSyBhGKrnrJrv4-o7lFeCGcTpahZKOBBBnDA")
 
   	@types = params[:category]
 
   	@cityspots = @client.spots_by_query(@search_query)
   	@lat = @cityspots[0].lat
   	@lng = @cityspots[0].lng
-  	@spots = @client.spots(@lat, @lng, :types => @types, :radius => 40000, :rating => 'prominence')
+  	@spots = @client.spots(@lat, @lng, :types => @types, :radius => 40000)
+
+  	@photo_url = Array.new
+
+  	# url = @spots[0].photos[0].fetch_url(800)
+
+  	@spots.each do |spot|
+  		if spot.photos[0] != nil
+  			@photo_url << spot.photos[0].fetch_url(1000)
+  		end
+  	end
 
   	# @spots = @client.spots(@lat, @lng, :radius => 40000)
 
