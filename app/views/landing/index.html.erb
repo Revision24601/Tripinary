@@ -1,32 +1,39 @@
-<div class="container">
-	<h4>Please Enter a City Below:</h4>
-	<div class="row">
-		<div class="col-md-10">
-			<form action="/search" id="search_form" class="custom show-search-options form-inline">
-			  <div class="input-wrapper">
-			    <input type="text" class="location input-large input-contrast" autocomplete="off" id="query" name="query" placeholder="Enter City">
-			  </div>
-			  <label>
-			    	<ul class="categoryList">
-			    		<li>
-							<input name="museum" type="checkbox"> Museums
-						</li>
-						<li>
-							<input name="kids" type="checkbox"> Kids
-						</li>
-						<li>
-							<input "holy sites" type="checkbox"> Holy Sites
-						</li>
-						<li>
-							<input "historical landmarks" type="checkbox"> Historical Landmarks
-						</li>
-					</ul>
-			    </label>
-			  <button type="submit" class="btn btn-primary btn-large btn-contrast" id="submit_location">
-			    Search
-			  </button>
-			</form>
-			<span></span>
+<div class="container">		
+	<form action="/search" id="search_form" class="custom show-search-options form-inline">
+		
+		<div class="row">
+			<div class="col-md-10">
+				<div class="input-wrapper">
+			    	<h4>Please Enter a City Below:</h4>
+			    	<input type="text" class="location input-large input-contrast" autocomplete="off" id="query" name="city" placeholder="Enter City">
+				</div>
+			</div>
 		</div>
-	</div>
+		<h4>Please Select Categories:</h4>
+		<div class="row categoryListRow">
+			<ul class="category-list">
+				<li>
+					<input type="checkbox" name="museum"> Museums
+				</li>
+				<li>
+					<input type="checkbox" name="kids"> Kids
+				</li>
+				<li>
+					<input type="checkbox" name=""> Holy Sites
+				</li>
+				<li>
+					<input type="checkbox" name="landmarks"> Landmarks, Iconic
+				</li>
+				<li>
+					<input type="checkbox" name="food"> Restaurants
+				</li>
+			</ul>
+			<div>
+				<button type="submit" class="btn btn-primary btn-large btn-contrast" id="submit_location">
+					Search
+				</button>
+			</div>
+		</div>
+	</form>
+	<span></span>
 </div>
