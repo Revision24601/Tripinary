@@ -2,12 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  background-color: #123;
+  min-height: 100%;
+  /*background-color: #123;*/
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  background-image: url(image-path("doge.jpg"))
+  background-image: url(image-path("background.jpg"));
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  /*background-color: #ff8000;*/
+  background: rgba(54, 25, 25, .5);
+  /*opacity: 0.2;*/
+  width: 30%;
+  text-align: center;
+  margin-top: 250px;
+  padding: 40px 0px 20px 0;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+#submit_location {
+  margin-top: 20px;
 }
 
 p, ol, ul, td {

@@ -1,2 +1,26 @@
-<h1>TESTING</h1>
-<%= @search_query %>
+<div class="container">
+	<h4>Please Select From Categories Below:</h4>
+	<div class="row">
+		<div class="col-md-10">
+			<form role="form" action="/categories">
+			    <label>
+			    	<ul class="categoryList">
+			    		<li>
+							<input type="checkbox"> Museums
+						</li>
+						<li>
+							<input type="checkbox"> Kids
+						</li>
+						<li>
+							<input type="checkbox"> Holy Sites
+						</li>
+						<li>
+							<input type="checkbox"> Historical Landmarks
+						</li>
+					</ul>
+			    </label>
+			  <button type="submit" class="btn btn-primary btn-large btn-contrast">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
